@@ -5,6 +5,11 @@ from torchvision import datasets, models, transforms
 from torch.utils.data import DataLoader
 import os
 
+
+
+# 0. Configuration
+
+# Use the "split_dataset" folder created by running prep.py
 DATA_DIR = "split_dataset" 
 BATCH_SIZE = 512
 NUM_EPOCHS = 97
@@ -12,6 +17,11 @@ LEARNING_RATE = 0.0002
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {DEVICE}")
 
+
+
+# 1. Data Transformations
+
+# Use standard ImageNet normalization
 data_transforms = {
     "train": transforms.Compose([
         transforms.Resize((224, 224)),
@@ -27,14 +37,19 @@ data_transforms = {
     ]),
 }
 
+
+
+# 2. Load Data
 image_datasets = {
     x: datasets.ImageFolder(os.path.join(DATA_DIR, x), data_transforms[x])
     for x in ["train", "val"]
 }
+
 dataloaders = {
     x: DataLoader(image_datasets[x], batch_size=BATCH_SIZE, shuffle=True, num_workers=2)
     for x in ["train", "val"]
 }
+
 dataset_sizes = {
     x: len(image_datasets[x])
     for x in ["train", "val"]
@@ -45,17 +60,34 @@ num_classes = len(class_names)
 
 print(f"Detected {num_classes} classes: {class_names}")
 
+
+
+# 3. Set up ResNet with Transfer Learning
+
+# Load ResNet50
 model = models.resnet50(weights=models.ResNet50_Weights.IMAGENET1K_V2)
 
+# Freeze all layers
 for param in model.parameters():
     param.requires_grad = False
 
+# Replace the final fully connected layer
 num_ftrs = model.fc.in_features
 model.fc = nn.Linear(num_ftrs, num_classes)
+
 model = model.to(DEVICE)
+
+
+
+# 4. Loss and Optimizer
 criterion = nn.CrossEntropyLoss()
+
+# Only optimize parameters of the final layer (model.fc)
 optimizer = optim.Adam(model.fc.parameters(), lr=LEARNING_RATE)
 
+
+
+# 5. Training Loop
 def train_model(model: models.ResNet, criterion: nn.CrossEntropyLoss, optimizer: optim.Adam, num_epochs: int = 10) -> models.ResNet:
     for epoch in range(num_epochs):
         print(f"Epoch {epoch+1}/{num_epochs}")
@@ -97,8 +129,15 @@ def train_model(model: models.ResNet, criterion: nn.CrossEntropyLoss, optimizer:
 
     return model
 
+
+
+# 6. Run Training
 trained_model = train_model(model, criterion, optimizer, num_epochs=NUM_EPOCHS)
 
+
+
+# 7. Save the Model
 model_pth = "skin_disease_resnet.pth"
+
 torch.save(trained_model.state_dict(), model_pth)
 print(f"Model saved successfully in {model_pth!r}.")
