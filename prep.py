@@ -13,11 +13,11 @@ temp_dir = Path(".temp_dataset")
 output_dir = Path("dataset")
 
 # --- 1. Download Function ---
-def show_progress(block_num, block_size, total_size):
+def show_progress(block_num: int, block_size: int, total_size: int):
     downloaded = block_num * block_size
     if total_size > 0:
         percent = downloaded * 100 / total_size
-        sys.stdout.write(f"\rDownloading: {percent:.1f}% [{downloaded/1024/1024:.1f} / {total_size/1024/1024:.1f} MB]")
+        sys.stdout.write(f"\rDownloading: {percent:.1f}% [{downloaded / 1024 / 1024:.1f} / {total_size / 1024 / 1024:.1f} MB]")
         sys.stdout.flush()
 
 # --- 2. Rename Logic ---
