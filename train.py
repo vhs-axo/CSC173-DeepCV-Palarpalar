@@ -137,10 +137,10 @@ print(f"Using Class Weights: {class_weights}")
 criterion = nn.CrossEntropyLoss(weight=class_weights, label_smoothing=0.1)
 
 # Only optimize parameters of the final layers
-optimizer = optim.SGD(
+optimizer = optim.Adam(
     [p for p in model.parameters() if p.requires_grad],
     lr=LEARNING_RATE,
-    momentum=0.9,
+    # momentum=0.9,
     weight_decay=1e-4,
 )
 
