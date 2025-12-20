@@ -1,3 +1,0 @@
-97
-train Loss: 0.5466 Acc: 0.8026
-val Loss: 0.6992 Acc: 0.7525
