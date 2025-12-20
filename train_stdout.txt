@@ -1,0 +1,207 @@
+Using device: cuda
+Random seed set to 67
+Detected 10 classes: ['atopic_dermatitis', 'basal_cell_carcinoma', 'benign_keratosis_like_lesions', 'eczema', 'melanocytic_nevi', 'melanoma', 'psoriasis_pictures_lichen_planus_related_diseases', 'seborrheic_keratoses_other_benign_tumors', 'tinea_ringworm_candidiasis_other_fungal_infections', 'warts_molluscum_other_viral_infections']
+Class Counts: [1005 2658 1663 1341 6376 2512 1644 1477 1361 1682]
+Using Class Weights: tensor([2.1611, 0.8171, 1.3060, 1.6196, 0.3406, 0.8646, 1.3211, 1.4705, 1.5958,
+        1.2913], device='cuda:0')
+Epoch 1/50
+----------
+train Loss: 1.4156 Acc: 0.6798
+val Loss: 1.2885 Acc: 0.7599
+Epoch 2/50
+----------
+train Loss: 1.2365 Acc: 0.7637
+val Loss: 1.2079 Acc: 0.7905
+Epoch 3/50
+----------
+train Loss: 1.1569 Acc: 0.7980
+val Loss: 1.1812 Acc: 0.7698
+Epoch 4/50
+----------
+train Loss: 1.1123 Acc: 0.8122
+val Loss: 1.1512 Acc: 0.7968
+Epoch 5/50
+----------
+train Loss: 1.0790 Acc: 0.8300
+val Loss: 1.1791 Acc: 0.7945
+Epoch 6/50
+----------
+train Loss: 1.0495 Acc: 0.8397
+val Loss: 1.1675 Acc: 0.8041
+Epoch 7/50
+----------
+train Loss: 1.0255 Acc: 0.8482
+val Loss: 1.1498 Acc: 0.7982
+Epoch 8/50
+----------
+train Loss: 1.0069 Acc: 0.8558
+val Loss: 1.1258 Acc: 0.8333
+Epoch 9/50
+----------
+train Loss: 0.9892 Acc: 0.8640
+val Loss: 1.1349 Acc: 0.8222
+Epoch 10/50
+----------
+train Loss: 0.9752 Acc: 0.8663
+val Loss: 1.1427 Acc: 0.8215
+Epoch 11/50
+----------
+train Loss: 0.9606 Acc: 0.8742
+val Loss: 1.1081 Acc: 0.8351
+Epoch 12/50
+----------
+train Loss: 0.9524 Acc: 0.8791
+val Loss: 1.1324 Acc: 0.8325
+Epoch 13/50
+----------
+train Loss: 0.9352 Acc: 0.8835
+val Loss: 1.1436 Acc: 0.8288
+Epoch 14/50
+----------
+train Loss: 0.9340 Acc: 0.8836
+val Loss: 1.1371 Acc: 0.8023
+Epoch 15/50
+----------
+train Loss: 0.9165 Acc: 0.8902
+val Loss: 1.1079 Acc: 0.8340
+Epoch 16/50
+----------
+train Loss: 0.9078 Acc: 0.8946
+val Loss: 1.1419 Acc: 0.8222
+Epoch 17/50
+----------
+train Loss: 0.9028 Acc: 0.8961
+val Loss: 1.1136 Acc: 0.8336
+Epoch 18/50
+----------
+train Loss: 0.8888 Acc: 0.8967
+val Loss: 1.1469 Acc: 0.8370
+Epoch 19/50
+----------
+train Loss: 0.8818 Acc: 0.9045
+val Loss: 1.1338 Acc: 0.8292
+Epoch 20/50
+----------
+train Loss: 0.8776 Acc: 0.9043
+val Loss: 1.1345 Acc: 0.8373
+Epoch 21/50
+----------
+train Loss: 0.8665 Acc: 0.9069
+val Loss: 1.1192 Acc: 0.8414
+Epoch 22/50
+----------
+train Loss: 0.8012 Acc: 0.9343
+val Loss: 1.0494 Acc: 0.8620
+Epoch 23/50
+----------
+train Loss: 0.7752 Acc: 0.9446
+val Loss: 1.0438 Acc: 0.8676
+Epoch 24/50
+----------
+train Loss: 0.7632 Acc: 0.9480
+val Loss: 1.0458 Acc: 0.8661
+Epoch 25/50
+----------
+train Loss: 0.7533 Acc: 0.9533
+val Loss: 1.0467 Acc: 0.8676
+Epoch 26/50
+----------
+train Loss: 0.7464 Acc: 0.9563
+val Loss: 1.0389 Acc: 0.8698
+Epoch 27/50
+----------
+train Loss: 0.7415 Acc: 0.9566
+val Loss: 1.0390 Acc: 0.8702
+Epoch 28/50
+----------
+train Loss: 0.7374 Acc: 0.9585
+val Loss: 1.0437 Acc: 0.8635
+Epoch 29/50
+----------
+train Loss: 0.7359 Acc: 0.9598
+val Loss: 1.0364 Acc: 0.8679
+Epoch 30/50
+----------
+train Loss: 0.7292 Acc: 0.9606
+val Loss: 1.0373 Acc: 0.8691
+Epoch 31/50
+----------
+train Loss: 0.7278 Acc: 0.9613
+val Loss: 1.0458 Acc: 0.8720
+Epoch 32/50
+----------
+train Loss: 0.7223 Acc: 0.9643
+val Loss: 1.0385 Acc: 0.8720
+Epoch 33/50
+----------
+train Loss: 0.7188 Acc: 0.9656
+val Loss: 1.0414 Acc: 0.8698
+Epoch 34/50
+----------
+train Loss: 0.7188 Acc: 0.9663
+val Loss: 1.0382 Acc: 0.8698
+Epoch 35/50
+----------
+train Loss: 0.7128 Acc: 0.9674
+val Loss: 1.0515 Acc: 0.8713
+Epoch 36/50
+----------
+train Loss: 0.7067 Acc: 0.9707
+val Loss: 1.0373 Acc: 0.8720
+Epoch 37/50
+----------
+train Loss: 0.7050 Acc: 0.9699
+val Loss: 1.0375 Acc: 0.8720
+Epoch 38/50
+----------
+train Loss: 0.7026 Acc: 0.9723
+val Loss: 1.0358 Acc: 0.8713
+Epoch 39/50
+----------
+train Loss: 0.7025 Acc: 0.9715
+val Loss: 1.0394 Acc: 0.8738
+Epoch 40/50
+----------
+train Loss: 0.7008 Acc: 0.9727
+val Loss: 1.0383 Acc: 0.8720
+Epoch 41/50
+----------
+train Loss: 0.6988 Acc: 0.9735
+val Loss: 1.0400 Acc: 0.8687
+Epoch 42/50
+----------
+train Loss: 0.7005 Acc: 0.9732
+val Loss: 1.0409 Acc: 0.8698
+Epoch 43/50
+----------
+train Loss: 0.6991 Acc: 0.9747
+val Loss: 1.0371 Acc: 0.8742
+Epoch 44/50
+----------
+train Loss: 0.7009 Acc: 0.9717
+val Loss: 1.0350 Acc: 0.8750
+Epoch 45/50
+----------
+train Loss: 0.6996 Acc: 0.9725
+val Loss: 1.0337 Acc: 0.8750
+Epoch 46/50
+----------
+train Loss: 0.6982 Acc: 0.9727
+val Loss: 1.0369 Acc: 0.8720
+Epoch 47/50
+----------
+train Loss: 0.6937 Acc: 0.9744
+val Loss: 1.0357 Acc: 0.8724
+Epoch 48/50
+----------
+train Loss: 0.6962 Acc: 0.9738
+val Loss: 1.0333 Acc: 0.8746
+Epoch 49/50
+----------
+train Loss: 0.6953 Acc: 0.9753
+val Loss: 1.0399 Acc: 0.8738
+Epoch 50/50
+----------
+train Loss: 0.6956 Acc: 0.9746
+val Loss: 1.0346 Acc: 0.8738
+Model saved successfully in 'skin_disease_resnet.pth'.
