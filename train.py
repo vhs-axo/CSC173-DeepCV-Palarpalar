@@ -134,7 +134,7 @@ print(f"Using Class Weights: {class_weights}")
 
 # B. Define Loss with Weights
 # Pass the calculated weights so the model pays more attention to rare classes
-criterion = nn.CrossEntropyLoss(weight=class_weights)
+criterion = nn.CrossEntropyLoss(weight=class_weights, label_smoothing=0.1)
 
 # Only optimize parameters of the final layers
 optimizer = optim.SGD(
