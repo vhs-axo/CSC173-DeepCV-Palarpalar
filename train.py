@@ -1,3 +1,4 @@
+from sklearn.metrics import balanced_accuracy_score
 import random
 import torch
 import torch.nn as nn
@@ -174,6 +175,9 @@ def train_model(
 
             running_loss = 0.0
             running_corrects = torch.tensor(0, device=DEVICE)
+            
+            all_preds = list()
+            all_labels = list()
 
             for inputs, labels in dataloaders[phase]:
                 inputs = inputs.to(DEVICE)
@@ -194,9 +198,12 @@ def train_model(
 
                 running_loss += loss.item() * inputs.size(0)
                 running_corrects += torch.sum(preds == labels.data)
+                
+                all_preds.extend(preds.cpu().numpy())
+                all_labels.extend(labels.cpu().numpy())
 
             epoch_loss = running_loss / dataset_sizes[phase]
-            epoch_acc = running_corrects.double() / dataset_sizes[phase]
+            epoch_acc = balanced_accuracy_score(all_labels, all_preds)
 
             print(f"{phase} Loss: {epoch_loss:.4f} Acc: {epoch_acc:.4f}")
             
