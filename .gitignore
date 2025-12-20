@@ -11,3 +11,5 @@ wheels/
 
 # Datsets
 dataset/
+.temp_dataset/
+skin-diseases-image-dataset.zip
