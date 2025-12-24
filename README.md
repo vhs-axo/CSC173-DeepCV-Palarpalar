@@ -181,3 +181,8 @@ This project successfully implemented a deep learning pipeline for skin disease 
 1.  Hossain, I. (2021, August 16). _Skin Diseases Image Dataset_. Kaggle. Retrieved December 11, 2025, from [https://www.kaggle.com/datasets/ismailpromus/skin-diseases-image-dataset](https://www.kaggle.com/datasets/ismailpromus/skin-diseases-image-dataset)
 2.  He, K., Zhang, X., Ren, S., & Sun, J. (2015). Deep residual learning for image recognition. _arXiv (Cornell University)_. [https://doi.org/10.48550/arxiv.1512.03385](https://doi.org/10.48550/arxiv.1512.03385).
 3.  Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Killeen, T., Lin, Z., Gimelshein, N., Antiga, L., Desmaison, A., Köpf, A., Yang, E. Z., DeVito, Z., Raison, M., Tejani, A., Chilamkurthy, S., Steiner, B., Fang, L., . . . Chintala, S. (2019). PyTorch: An Imperative Style, High-Performance Deep Learning Library. _arXiv (Cornell University), 32,_ 8026–8037. [https://doi.org/10.48550/arxiv.1912.01703](https://doi.org/10.48550/arxiv.1912.01703).
+
+
+
+## GitHub Pages
+View this project: [https://vhs-axo.github.io/CSC173-DeepCV-Palarpalar/](https://vhs-axo.github.io/CSC173-DeepCV-Palarpalar/)
