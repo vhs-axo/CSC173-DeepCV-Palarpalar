@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/badge/Python-3.13+-blue)](https://python.org) [![PyTorch](https://img.shields.io/badge/PyTorch-2.9-orange)](https://pytorch.org)
 
 ## Abstract
-Skin diseases are a pervasive health issue often exacerbated by the scarcity of specialized care in remote regions. This project presents an automated computer vision system designed to classify 10 different skin conditions, including Melanoma, Eczema, and Atopic Dermatitis. We utilized **Transfer Learning** with a **ResNet50** architecture pre-trained on ImageNet, fine-tuning it on the "Skin Diseases Image Dataset" (27,153 images). To address class imbalance and limited data, we employed weighted Cross-Entropy Loss and extensive data augmentation. Current results show a **Training Accuracy of 81.33%** and a **Validation Accuracy of 75.25%**, demonstrating the model's potential as a supportive diagnostic tool for early detection and triage.
+Skin diseases are a pervasive health issue often exacerbated by the scarcity of specialized care in remote regions. This project presents an automated computer vision system designed to classify 10 different skin conditions, including Melanoma, Eczema, and Atopic Dermatitis. We utilized **Transfer Learning** with a **ResNet50** architecture pre-trained on ImageNet, fine-tuning it on the "Skin Diseases Image Dataset" (27,153 images). To address class imbalance and limited data, we employed weighted Cross-Entropy Loss and extensive data augmentation. Current results show a **Training Accuracy of 97.36%**, a **Validation Accuracy of 82.31%**, and a **Test Accuracy of 82.04%**, demonstrating the model's potential as a supportive diagnostic tool for early detection and triage.
 
 
 
